@@ -36,6 +36,11 @@
     },
     "project_url": {
       "type": "string"
+    },
+    "credential": {
+      "type": "component",
+      "repeatable": false,
+      "component": "projects.credentials"
     }
   }
 }
