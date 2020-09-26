@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profile_links",
+  "info": {
+    "name": "Profile Link"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
