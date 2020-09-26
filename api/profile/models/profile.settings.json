@@ -36,6 +36,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "certifications": {
+      "via": "profile",
+      "collection": "certifications"
+    },
+    "courses": {
+      "via": "profile",
+      "collection": "courses"
     }
   }
 }

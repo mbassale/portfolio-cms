@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certifications",
+  "info": {
+    "name": "Certifications"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "organization": {
+      "type": "string",
+      "required": true
+    },
+    "from_date": {
+      "type": "date",
+      "required": true
+    },
+    "expiration_date": {
+      "type": "date"
+    },
+    "no_expiration_date": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "profile": {
+      "model": "profile",
+      "via": "certifications"
+    },
+    "certificate_file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
