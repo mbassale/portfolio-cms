@@ -6,3 +6,25 @@ services:
       - .:/srv/app
     ports:
       - "$PORT:$PORT"
+    networks:
+      - portfolio-network
+
+  app:
+    image: node:lts
+    container_name: portfolio_blog
+    restart: unless-stopped
+    tty: true
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ../nextjs-blog:/usr/src/app
+    ports:
+      - "1339:3000"
+    networks:
+      - portfolio-network
+    command: yarn run start
+
+networks:
+  portfolio-network:
+    driver: bridge
