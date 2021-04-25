@@ -12,7 +12,6 @@ services:
   app:
     image: node:lts
     container_name: portfolio_blog
-    restart: unless-stopped
     tty: true
     working_dir: /usr/src/app
     volumes:
@@ -21,7 +20,7 @@ services:
       - "1339:3000"
     networks:
       - portfolio-network
-    command: yarn run start
+    command: yarn run dev
 
 networks:
   portfolio-network:
