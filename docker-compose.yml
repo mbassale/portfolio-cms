@@ -20,7 +20,7 @@ services:
       - "1339:3000"
     networks:
       - portfolio-network
-    command: yarn run dev
+    command: yarn run start
 
 networks:
   portfolio-network:
